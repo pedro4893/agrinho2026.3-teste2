@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site Agrinho - Conectando o campo à cidade, valorizando a agricultura sustentável e o meio ambiente.">
     <title>Agrinho - Do Campo à Cidade</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
 <base target="_blank">
 </head>
 <body>
-    <!-- Barra de navegação principal -->
     <header class="cabecalho" id="cabecalho">
         <div class="container">
             <div class="logo">
@@ -24,6 +23,7 @@
                     <li><a href="#sobre" class="link-nav">Sobre</a></li>
                     <li><a href="#culturas" class="link-nav">Culturas</a></li>
                     <li><a href="#sustentabilidade" class="link-nav">Sustentabilidade</a></li>
+                    <li><a href="#estatisticas" class="link-nav">Estatísticas</a></li>
                     <li><a href="#quiz" class="link-nav">Quiz</a></li>
                     <li><a href="#contato" class="link-nav">Contato</a></li>
                 </ul>
@@ -44,75 +44,52 @@
         </div>
     </header>
 
-    <!-- Seção Hero (Início) -->
     <section class="secao-hero" id="inicio">
         <div class="overlay-hero"></div>
         <div class="container conteudo-hero">
             <h1 class="titulo-hero">Do Campo à Cidade</h1>
-            <p class="subtitulo-hero">
-                A agricultura conecta todos nós. Descubra como o campo alimenta o mundo 
-                e como podemos construir um futuro mais sustentável juntos.
-            </p>
+            <p class="subtitulo-hero">A agricultura conecta todos nós. Descubra como o campo alimenta o mundo e como podemos construir um futuro mais sustentável juntos.</p>
             <div class="botoes-hero">
                 <a href="#sobre" class="botao-principal">Explorar</a>
                 <a href="#quiz" class="botao-secundario">Testar Conhecimentos</a>
             </div>
         </div>
-        <div class="indicador-scroll">
-            <span class="seta-scroll">↓</span>
-        </div>
+        <div class="indicador-scroll"><span class="seta-scroll">↓</span></div>
     </section>
 
-    <!-- Seção Sobre -->
     <section class="secao-sobre" id="sobre">
         <div class="container">
             <div class="cabecalho-secao">
                 <span class="etiqueta-secao">Sobre o Projeto</span>
                 <h2 class="titulo-secao">O que é o Agrinho?</h2>
-                <p class="descricao-secao">
-                    O programa Agrinho é uma iniciativa do Sistema FAEP/SENAR-PR que busca 
-                    conscientizar estudantes sobre a importância da agricultura, do meio ambiente 
-                    e da sustentabilidade.
-                </p>
+                <p class="descricao-secao">O programa Agrinho é uma iniciativa do Sistema FAEP/SENAR-PR que busca conscientizar estudantes sobre a importância da agricultura, do meio ambiente e da sustentabilidade.</p>
             </div>
             <div class="grid-sobre">
                 <div class="card-sobre">
                     <div class="icone-card">🌾</div>
                     <h3 class="titulo-card">Agricultura</h3>
-                    <p class="texto-card">
-                        A agricultura é a base da alimentação mundial. No Brasil, somos um dos 
-                        maiores produtores de alimentos do planeta, alimentando bilhões de pessoas.
-                    </p>
+                    <p class="texto-card">A agricultura é a base da alimentação mundial. No Brasil, somos um dos maiores produtores de alimentos do planeta, alimentando bilhões de pessoas.</p>
                 </div>
                 <div class="card-sobre">
                     <div class="icone-card">🌳</div>
                     <h3 class="titulo-card">Meio Ambiente</h3>
-                    <p class="texto-card">
-                        Preservar o meio ambiente é essencial para garantir a produção de alimentos 
-                        saudáveis e manter o equilíbrio dos ecossistemas naturais.
-                    </p>
+                    <p class="texto-card">Preservar o meio ambiente é essencial para garantir a produção de alimentos saudáveis e manter o equilíbrio dos ecossistemas naturais.</p>
                 </div>
                 <div class="card-sobre">
                     <div class="icone-card">🏙️</div>
                     <h3 class="titulo-card">Campo e Cidade</h3>
-                    <p class="texto-card">
-                        A conexão entre campo e cidade é vital. O campo produz, a cidade consome, 
-                        e juntos formamos uma cadeia de valor que sustenta a sociedade.
-                    </p>
+                    <p class="texto-card">A conexão entre campo e cidade é vital. O campo produz, a cidade consome, e juntos formamos uma cadeia de valor que sustenta a sociedade.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Culturas -->
     <section class="secao-culturas" id="culturas">
         <div class="container">
             <div class="cabecalho-secao">
                 <span class="etiqueta-secao">Produção Agrícola</span>
                 <h2 class="titulo-secao">Principais Culturas do Brasil</h2>
-                <p class="descricao-secao">
-                    Conheça as culturas que fazem do Brasil uma potência agrícola mundial.
-                </p>
+                <p class="descricao-secao">Conheça as culturas que fazem do Brasil uma potência agrícola mundial.</p>
             </div>
             <div class="filtros-culturas">
                 <button class="botao-filtro ativo" data-filtro="todos">Todas</button>
@@ -120,142 +97,175 @@
                 <button class="botao-filtro" data-filtro="fruta">Frutas</button>
                 <button class="botao-filtro" data-filtro="industrial">Industrial</button>
             </div>
-            <div class="grid-culturas" id="gridCulturas">
-                <!-- Cards de culturas serão inseridos via JavaScript -->
-            </div>
+            <div class="grid-culturas" id="gridCulturas"></div>
         </div>
     </section>
 
-    <!-- Seção Sustentabilidade -->
     <section class="secao-sustentabilidade" id="sustentabilidade">
         <div class="container">
             <div class="cabecalho-secao">
                 <span class="etiqueta-secao">Meio Ambiente</span>
                 <h2 class="titulo-secao">Agricultura Sustentável</h2>
-                <p class="descricao-secao">
-                    Práticas que preservam o meio ambiente e garantem a produção de alimentos 
-                    para as futuras gerações.
-                </p>
+                <p class="descricao-secao">Práticas que preservam o meio ambiente e garantem a produção de alimentos para as futuras gerações.</p>
             </div>
             <div class="conteudo-sustentabilidade">
                 <div class="lista-praticas">
-                    <div class="item-pratica" data-pratica="agrofloresta">
+                    <div class="item-pratica ativo" data-pratica="agrofloresta">
                         <div class="numero-pratica">01</div>
-                        <div class="info-pratica">
-                            <h3>Sistemas Agroflorestais</h3>
-                            <p>Integração de árvores, culturas e animais no mesmo espaço.</p>
-                        </div>
+                        <div class="info-pratica"><h3>Sistemas Agroflorestais</h3><p>Integração de árvores, culturas e animais no mesmo espaço.</p></div>
                         <span class="seta-pratica">→</span>
                     </div>
                     <div class="item-pratica" data-pratica="organico">
                         <div class="numero-pratica">02</div>
-                        <div class="info-pratica">
-                            <h3>Agricultura Orgânica</h3>
-                            <p>Produção sem agrotóxicos sintéticos, respeitando os ciclos naturais.</p>
-                        </div>
+                        <div class="info-pratica"><h3>Agricultura Orgânica</h3><p>Produção sem agrotóxicos sintéticos, respeitando os ciclos naturais.</p></div>
                         <span class="seta-pratica">→</span>
                     </div>
                     <div class="item-pratica" data-pratica="rotacao">
                         <div class="numero-pratica">03</div>
-                        <div class="info-pratica">
-                            <h3>Rotação de Culturas</h3>
-                            <p>Alternância de plantas para manter a fertilidade do solo.</p>
-                        </div>
+                        <div class="info-pratica"><h3>Rotação de Culturas</h3><p>Alternância de plantas para manter a fertilidade do solo.</p></div>
                         <span class="seta-pratica">→</span>
                     </div>
                     <div class="item-pratica" data-pratica="irrigação">
                         <div class="numero-pratica">04</div>
-                        <div class="info-pratica">
-                            <h3>Irrigação de Precisão</h3>
-                            <p>Uso inteligente da água com tecnologia para reduzir desperdício.</p>
-                        </div>
+                        <div class="info-pratica"><h3>Irrigação de Precisão</h3><p>Uso inteligente da água com tecnologia para reduzir desperdício.</p></div>
                         <span class="seta-pratica">→</span>
                     </div>
                 </div>
                 <div class="painel-detalhes" id="painelDetalhes">
                     <div class="conteudo-detalhe ativo" id="detalhe-agrofloresta">
-                        <div class="imagem-detalhe" style="background: linear-gradient(135deg, #2d5a27 0%, #4a8c3f 100%);">
-                            <span class="emoji-detalhe">🌳🌽🐄</span>
-                        </div>
+                        <div class="imagem-detalhe" style="background: linear-gradient(135deg, #2d5a27 0%, #4a8c3f 100%);"><span class="emoji-detalhe">🌳🌽🐄</span></div>
                         <h3>Sistemas Agroflorestais</h3>
-                        <p>
-                            Os sistemas agroflorestais combinam árvores, culturas agrícolas e/ou 
-                            animais em um mesmo sistema produtivo. Essa prática imita os ecossistemas 
-                            naturais, promovendo biodiversidade, conservação do solo e múltiplas fontes 
-                            de renda para o agricultor.
-                        </p>
-                        <ul class="lista-beneficios">
-                            <li>✓ Conservação da biodiversidade</li>
-                            <li>✓ Proteção do solo contra erosão</li>
-                            <li>✓ Múltiplas fontes de renda</li>
-                            <li>✓ Sequestro de carbono</li>
-                        </ul>
+                        <p>Os sistemas agroflorestais combinam árvores, culturas agrícolas e/ou animais em um mesmo sistema produtivo. Essa prática imita os ecossistemas naturais, promovendo biodiversidade, conservação do solo e múltiplas fontes de renda para o agricultor.</p>
+                        <ul class="lista-beneficios"><li>✓ Conservação da biodiversidade</li><li>✓ Proteção do solo contra erosão</li><li>✓ Múltiplas fontes de renda</li><li>✓ Sequestro de carbono</li></ul>
                     </div>
                     <div class="conteudo-detalhe" id="detalhe-organico">
-                        <div class="imagem-detalhe" style="background: linear-gradient(135deg, #5a7d27 0%, #8cb34a 100%);">
-                            <span class="emoji-detalhe">🌿🍅🐝</span>
-                        </div>
+                        <div class="imagem-detalhe" style="background: linear-gradient(135deg, #5a7d27 0%, #8cb34a 100%);"><span class="emoji-detalhe">🌿🍅🐝</span></div>
                         <h3>Agricultura Orgânica</h3>
-                        <p>
-                            A agricultura orgânica exclui o uso de fertilizantes sintéticos, 
-                            pesticidas, reguladores de crescimento e aditivos para alimentação animal. 
-                            Prioriza métodos naturais de controle de pragas e fertilização do solo.
-                        </p>
-                        <ul class="lista-beneficios">
-                            <li>✓ Alimentos livres de resíduos químicos</li>
-                            <li>✓ Preservação da saúde do solo</li>
-                            <li>✓ Proteção dos polinizadores</li>
-                            <li>✓ Valorização do produtor</li>
-                        </ul>
+                        <p>A agricultura orgânica exclui o uso de fertilizantes sintéticos, pesticidas, reguladores de crescimento e aditivos para alimentação animal. Prioriza métodos naturais de controle de pragas e fertilização do solo.</p>
+                        <ul class="lista-beneficios"><li>✓ Alimentos livres de resíduos químicos</li><li>✓ Preservação da saúde do solo</li><li>✓ Proteção dos polinizadores</li><li>✓ Valorização do produtor</li></ul>
                     </div>
                     <div class="conteudo-detalhe" id="detalhe-rotacao">
-                        <div class="imagem-detalhe" style="background: linear-gradient(135deg, #8c6d3f 0%, #c4a35a 100%);">
-                            <span class="emoji-detalhe">🌾🫘🌻</span>
-                        </div>
+                        <div class="imagem-detalhe" style="background: linear-gradient(135deg, #8c6d3f 0%, #c4a35a 100%);"><span class="emoji-detalhe">🌾🫘🌻</span></div>
                         <h3>Rotação de Culturas</h3>
-                        <p>
-                            A rotação de culturas consiste em alternar diferentes espécies vegetais 
-                            no mesmo terreno ao longo do tempo. Essa prática evita o esgotamento 
-                            de nutrientes do solo e quebra o ciclo de pragas e doenças.
-                        </p>
-                        <ul class="lista-beneficios">
-                            <li>✓ Recuperação natural da fertilidade</li>
-                            <li>✓ Redução de pragas e doenças</li>
-                            <li>✓ Melhoria da estrutura do solo</li>
-                            <li>✓ Diversificação da produção</li>
-                        </ul>
+                        <p>A rotação de culturas consiste em alternar diferentes espécies vegetais no mesmo terreno ao longo do tempo. Essa prática evita o esgotamento de nutrientes do solo e quebra o ciclo de pragas e doenças.</p>
+                        <ul class="lista-beneficios"><li>✓ Recuperação natural da fertilidade</li><li>✓ Redução de pragas e doenças</li><li>✓ Melhoria da estrutura do solo</li><li>✓ Diversificação da produção</li></ul>
                     </div>
                     <div class="conteudo-detalhe" id="detalhe-irrigação">
-                        <div class="imagem-detalhe" style="background: linear-gradient(135deg, #277d8c 0%, #4ab3c4 100%);">
-                            <span class="emoji-detalhe">💧🌱📡</span>
-                        </div>
+                        <div class="imagem-detalhe" style="background: linear-gradient(135deg, #277d8c 0%, #4ab3c4 100%);"><span class="emoji-detalhe">💧🌱📡</span></div>
                         <h3>Irrigação de Precisão</h3>
-                        <p>
-                            A irrigação de precisão utiliza sensores, drones e sistemas automatizados 
-                            para aplicar a quantidade exata de água que cada planta necessita, 
-                            reduzindo drasticamente o desperdício de água e aumentando a produtividade.
-                        </p>
-                        <ul class="lista-beneficios">
-                            <li>✓ Economia de até 40% de água</li>
-                            <li>✓ Aumento da produtividade</li>
-                            <li>✓ Redução de custos operacionais</li>
-                            <li>✓ Preservação dos recursos hídricos</li>
-                        </ul>
+                        <p>A irrigação de precisão utiliza sensores, drones e sistemas automatizados para aplicar a quantidade exata de água que cada planta necessita, reduzindo drasticamente o desperdício de água e aumentando a produtividade.</p>
+                        <ul class="lista-beneficios"><li>✓ Economia de até 40% de água</li><li>✓ Aumento da produtividade</li><li>✓ Redução de custos operacionais</li><li>✓ Preservação dos recursos hídricos</li></ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Quiz Interativo -->
+    <section class="secao-estatisticas" id="estatisticas">
+        <div class="container">
+            <div class="cabecalho-secao">
+                <span class="etiqueta-secao">Dados e Números</span>
+                <h2 class="titulo-secao">O Brasil no Agronegócio</h2>
+                <p class="descricao-secao">O Brasil é uma potência agrícola mundial. Veja os números que comprovam essa força.</p>
+            </div>
+            <div class="grid-estatisticas">
+                <div class="card-estatistica">
+                    <div class="icone-estatistica">🏆</div>
+                    <div class="conteudo-estatistica">
+                        <span class="numero-estatistica" data-valor="150">0</span>
+                        <span class="unidade-estatistica">milhões</span>
+                        <p class="descricao-estatistica">de toneladas de soja produzidas anualmente</p>
+                    </div>
+                </div>
+                <div class="card-estatistica">
+                    <div class="icone-estatistica">🌍</div>
+                    <div class="conteudo-estatistica">
+                        <span class="numero-estatistica" data-valor="28">0</span>
+                        <span class="unidade-estatistica">%</span>
+                        <p class="descricao-estatistica">do PIB nacional vêm do agronegócio</p>
+                    </div>
+                </div>
+                <div class="card-estatistica">
+                    <div class="icone-estatistica">👨‍🌾</div>
+                    <div class="conteudo-estatistica">
+                        <span class="numero-estatistica" data-valor="4.5">0</span>
+                        <span class="unidade-estatistica">milhões</span>
+                        <p class="descricao-estatistica">de produtores rurais no Brasil</p>
+                    </div>
+                </div>
+                <div class="card-estatistica">
+                    <div class="icone-estatistica">🌱</div>
+                    <div class="conteudo-estatistica">
+                        <span class="numero-estatistica" data-valor="66">0</span>
+                        <span class="unidade-estatistica">milhões</span>
+                        <p class="descricao-estatistica">de hectares de área plantada</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grafico-container">
+                <h3 class="titulo-grafico">Produção por Região (milhões de toneladas)</h3>
+                <div class="barras-grafico" id="barrasGrafico"></div>
+                <div class="legenda-grafico">
+                    <div class="item-legenda"><span class="cor-legenda" style="background:#2d5a27"></span> Centro-Oeste</div>
+                    <div class="item-legenda"><span class="cor-legenda" style="background:#4a8c3f"></span> Sul</div>
+                    <div class="item-legenda"><span class="cor-legenda" style="background:#c4a35a"></span> Sudeste</div>
+                    <div class="item-legenda"><span class="cor-legenda" style="background:#8cb34a"></span> Nordeste</div>
+                    <div class="item-legenda"><span class="cor-legenda" style="background:#277d8c"></span> Norte</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao-curiosidades" id="curiosidades">
+        <div class="container">
+            <div class="cabecalho-secao">
+                <span class="etiqueta-secao">Você Sabia?</span>
+                <h2 class="titulo-secao">Curiosidades do Agro</h2>
+                <p class="descricao-secao">Descubra fatos surpreendentes sobre a agricultura brasileira.</p>
+            </div>
+            <div class="carrossel-container">
+                <button class="botao-carrossel anterior" id="botaoAnterior">←</button>
+                <div class="carrossel-viewport">
+                    <div class="carrossel-track" id="carrosselTrack">
+                        <div class="slide-carrossel">
+                            <div class="slide-icone">🐄</div>
+                            <h3>Rebanho Bovino</h3>
+                            <p>O Brasil possui o maior rebanho bovino comercial do mundo, com mais de 230 milhões de cabeças.</p>
+                        </div>
+                        <div class="slide-carrossel">
+                            <div class="slide-icone">☕</div>
+                            <h3>Café Brasileiro</h3>
+                            <p>O Brasil produz cerca de 1/3 de todo o café consumido no planeta, sendo líder há mais de 150 anos.</p>
+                        </div>
+                        <div class="slide-carrossel">
+                            <div class="slide-icone">🌽</div>
+                            <h3>Milho de Qualidade</h3>
+                            <p>A safra brasileira de milho cresceu 400% nas últimas duas décadas, graças à tecnologia e pesquisa.</p>
+                        </div>
+                        <div class="slide-carrossel">
+                            <div class="slide-icone">🍊</div>
+                            <h3>Suco de Laranja</h3>
+                            <p>O Brasil é responsável por 50% da produção mundial de suco de laranja concentrado.</p>
+                        </div>
+                        <div class="slide-carrossel">
+                            <div class="slide-icone">🌱</div>
+                            <h3>Transgênicos</h3>
+                            <p>O Brasil é o 2º maior produtor de culturas transgênicas do mundo, atrás apenas dos EUA.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="botao-carrossel proximo" id="botaoProximo">→</button>
+                <div class="indicadores-carrossel" id="indicadoresCarrossel"></div>
+            </div>
+        </div>
+    </section>
+
     <section class="secao-quiz" id="quiz">
         <div class="container">
             <div class="cabecalho-secao">
                 <span class="etiqueta-secao">Interativo</span>
                 <h2 class="titulo-secao">Quiz do Campo</h2>
-                <p class="descricao-secao">
-                    Teste seus conhecimentos sobre agricultura e sustentabilidade!
-                </p>
+                <p class="descricao-secao">Teste seus conhecimentos sobre agricultura e sustentabilidade!</p>
             </div>
             <div class="container-quiz" id="containerQuiz">
                 <div class="tela-inicial-quiz" id="telaInicialQuiz">
@@ -265,9 +275,7 @@
                     <button class="botao-iniciar-quiz" id="botaoIniciarQuiz">Iniciar Quiz</button>
                 </div>
                 <div class="tela-pergunta-quiz" id="telaPerguntaQuiz" style="display: none;">
-                    <div class="barra-progresso">
-                        <div class="progresso-preenchido" id="progressoPreenchido"></div>
-                    </div>
+                    <div class="barra-progresso"><div class="progresso-preenchido" id="progressoPreenchido"></div></div>
                     <div class="info-pergunta">
                         <span class="numero-pergunta" id="numeroPergunta">1/5</span>
                         <span class="pontuacao-atual" id="pontuacaoAtual">Pontos: 0</span>
@@ -280,14 +288,8 @@
                     <h3 id="tituloResultado">Parabéns!</h3>
                     <p class="texto-resultado" id="textoResultado"></p>
                     <div class="estatisticas-resultado">
-                        <div class="estatistica">
-                            <span class="valor-estatistica" id="valorAcertos">0</span>
-                            <span class="label-estatistica">Acertos</span>
-                        </div>
-                        <div class="estatistica">
-                            <span class="valor-estatistica" id="valorPontos">0</span>
-                            <span class="label-estatistica">Pontos</span>
-                        </div>
+                        <div class="estatistica"><span class="valor-estatistica" id="valorAcertos">0</span><span class="label-estatistica">Acertos</span></div>
+                        <div class="estatistica"><span class="valor-estatistica" id="valorPontos">0</span><span class="label-estatistica">Pontos</span></div>
                     </div>
                     <button class="botao-reiniciar-quiz" id="botaoReiniciarQuiz">Tentar Novamente</button>
                 </div>
@@ -295,15 +297,12 @@
         </div>
     </section>
 
-    <!-- Seção Contato -->
     <section class="secao-contato" id="contato">
         <div class="container">
             <div class="cabecalho-secao">
                 <span class="etiqueta-secao">Contato</span>
                 <h2 class="titulo-secao">Fale Conosco</h2>
-                <p class="descricao-secao">
-                    Tem dúvidas ou sugestões? Envie uma mensagem!
-                </p>
+                <p class="descricao-secao">Tem dúvidas ou sugestões? Envie uma mensagem!</p>
             </div>
             <div class="grid-contato">
                 <form class="formulario-contato" id="formularioContato">
@@ -335,29 +334,21 @@
                 <div class="info-contato">
                     <div class="item-info">
                         <span class="icone-info">📍</span>
-                        <div>
-                            <h4>Localização</h4>
-                            <p>Paraná, Brasil</p>
-                        </div>
+                        <div><h4>Localização</h4><p>Paraná, Brasil</p></div>
                     </div>
                     <div class="item-info">
                         <span class="icone-info">📧</span>
-                        <div>
-                            <h4>E-mail</h4>
-                            <p>contato@agrinho.org.br</p>
-                        </div>
+                        <div><h4>E-mail</h4><p>contato@agrinho.org.br</p></div>
                     </div>
                     <div class="item-info">
                         <span class="icone-info">🌐</span>
-                        <div>
-                            <h4>Website</h4>
-                            <p>www.agrinho.org.br</p>
-                        </div>
+                        <div><h4>Website</h4><p>www.agrinho.org.br</p></div>
                     </div>
                     <div class="mapa-localizacao">
                         <div class="mapa-placeholder">
-                            <span>🗺️ Mapa do Paraná</span>
-                            <p>Localização do projeto Agrinho</p>
+                            <span>🗺️</span>
+                            <p>Mapa do Paraná</p>
+                            <small>Localização do projeto Agrinho</small>
                         </div>
                     </div>
                 </div>
@@ -365,50 +356,29 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer class="rodape">
         <div class="container">
             <div class="conteudo-rodape">
                 <div class="info-rodape">
-                    <div class="logo-rodape">
-                        <span class="logo-icone">🌱</span>
-                        <span class="logo-texto">Agrinho</span>
-                    </div>
-                    <p class="texto-rodape">
-                        Programa de conscientização sobre agricultura, meio ambiente e 
-                        sustentabilidade. Conectando o campo à cidade.
-                    </p>
+                    <div class="logo-rodape"><span class="logo-icone">🌱</span><span class="logo-texto">Agrinho</span></div>
+                    <p class="texto-rodape">Programa de conscientização sobre agricultura, meio ambiente e sustentabilidade. Conectando o campo à cidade.</p>
                 </div>
                 <div class="links-rodape">
                     <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#culturas">Culturas</a></li>
-                        <li><a href="#quiz">Quiz</a></li>
-                    </ul>
+                    <ul><li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#culturas">Culturas</a></li><li><a href="#quiz">Quiz</a></li></ul>
                 </div>
                 <div class="links-rodape">
                     <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="#sustentabilidade">Sustentabilidade</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                        <li><a href="#" id="linkInstrucoes">Instruções</a></li>
-                    </ul>
+                    <ul><li><a href="#sustentabilidade">Sustentabilidade</a></li><li><a href="#contato">Contato</a></li><li><a href="#" id="linkInstrucoes">Instruções</a></li></ul>
                 </div>
             </div>
             <div class="linha-rodape">
-                <p class="copyright">
-                    © 2026 Agrinho - Programa FAEP/SENAR-PR. Todos os direitos reservados.
-                </p>
-                <div class="creditos-ferramentas">
-                    <span>Ferramentas: HTML5, CSS3, JavaScript</span>
-                </div>
+                <p class="copyright">© 2026 Agrinho - Programa FAEP/SENAR-PR. Todos os direitos reservados.</p>
+                <div class="creditos-ferramentas"><span>Ferramentas: HTML5, CSS3, JavaScript</span></div>
             </div>
         </div>
     </footer>
 
-    <!-- Modal de Instruções -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-conteudo">
             <button class="botao-fechar-modal" id="botaoFecharModal">&times;</button>
@@ -416,43 +386,21 @@
             <div class="instrucoes-texto">
                 <h3>Bem-vindo ao site Agrinho!</h3>
                 <p>Este site foi desenvolvido para conscientizar sobre a importância da agricultura e do meio ambiente.</p>
-
                 <h4>🧭 Navegação</h4>
-                <ul>
-                    <li>Use o menu superior para navegar entre as seções</li>
-                    <li>O site é totalmente responsivo e funciona em celulares e tablets</li>
-                    <li>Clique nos cards para explorar mais informações</li>
-                </ul>
-
+                <ul><li>Use o menu superior para navegar entre as seções</li><li>O site é totalmente responsivo e funciona em celulares e tablets</li><li>Clique nos cards para explorar mais informações</li></ul>
                 <h4>🎨 Recursos</h4>
-                <ul>
-                    <li><strong>Modo Escuro:</strong> Clique no ícone 🌙 para alternar entre tema claro e escuro</li>
-                    <li><strong>Tamanho da Fonte:</strong> Clique em A+ para aumentar o texto</li>
-                    <li><strong>Filtros:</strong> Na seção Culturas, use os filtros para organizar as informações</li>
-                    <li><strong>Quiz:</strong> Teste seus conhecimentos na seção interativa</li>
-                </ul>
-
+                <ul><li><strong>Modo Escuro:</strong> Clique no ícone 🌙 para alternar entre tema claro e escuro</li><li><strong>Tamanho da Fonte:</strong> Clique em A+ para aumentar o texto</li><li><strong>Filtros:</strong> Na seção Culturas, use os filtros para organizar as informações</li><li><strong>Quiz:</strong> Teste seus conhecimentos na seção interativa</li><li><strong>Estatísticas:</strong> Veja números do agronegócio brasileiro com animações</li><li><strong>Carrossel:</strong> Navegue pelas curiosidades do agro</li></ul>
                 <h4>🌱 Seções Principais</h4>
-                <ul>
-                    <li><strong>Sobre:</strong> Conheça o programa Agrinho</li>
-                    <li><strong>Culturas:</strong> Explore as principais culturas brasileiras</li>
-                    <li><strong>Sustentabilidade:</strong> Aprenda práticas sustentáveis</li>
-                    <li><strong>Quiz:</strong> Desafie-se com perguntas interativas</li>
-                </ul>
-
+                <ul><li><strong>Sobre:</strong> Conheça o programa Agrinho</li><li><strong>Culturas:</strong> Explore as principais culturas brasileiras</li><li><strong>Sustentabilidade:</strong> Aprenda práticas sustentáveis</li><li><strong>Estatísticas:</strong> Dados e números do agronegócio</li><li><strong>Quiz:</strong> Desafie-se com perguntas interativas</li></ul>
                 <h4>📱 Tecnologias</h4>
-                <p>HTML5, CSS3 (Flexbox/Grid, Media Queries), JavaScript (DOM Manipulation, Event Listeners)</p>
-
+                <p>HTML5, CSS3 (Flexbox/Grid, Media Queries, Animações), JavaScript (DOM Manipulation, Event Listeners, Intersection Observer, localStorage)</p>
                 <h4>🎯 Objetivo</h4>
                 <p>Conectar o campo à cidade, valorizando a agricultura sustentável e promovendo a conscientização ambiental.</p>
             </div>
         </div>
     </div>
 
-    <!-- Botão Voltar ao Topo -->
-    <button class="botao-voltar-topo" id="botaoVoltarTopo" aria-label="Voltar ao topo">
-        ↑
-    </button>
+    <button class="botao-voltar-topo" id="botaoVoltarTopo" aria-label="Voltar ao topo">↑</button>
 
     <script src="js/script.js"></script>
 </body>
